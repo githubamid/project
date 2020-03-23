@@ -9,3 +9,5 @@ keyed_groups:
 groups:
   # add hosts to the group test if any of the dictionary's keys or values is the word 'Test'
   test: "'Test' in (tags|list)" 
+aws_access_key_id: AKIAUM5U62R6NUBIML7D
+aws_secret_access_key: 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
