@@ -1,0 +1,22 @@
+- name: Create directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+  with_items:
+    - "{{ main_dir}}"
+    - "{{ wp_dir}}"
+    - "{{ db_dir }}"
+  tags:
+    - crdir
+- name: Copy "docker-compose" file
+  copy:
+    src: ../docker-compose.yaml
+    dest: "{{ main_dir }}"
+  tags:
+    - copydoc
+- name: Install WP and Database
+  shell: 
+    docker-compose -f "{{ main_dir}}/docker-compose.yaml" up -d
+  tags:
+    - applic_up

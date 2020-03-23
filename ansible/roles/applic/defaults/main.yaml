@@ -1,0 +1,3 @@
+main_dir: "/applic"
+wp_dir: "/applic/wp_data"
+db_dir: "/applic/db_data"
