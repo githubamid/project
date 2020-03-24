@@ -7,12 +7,8 @@
     - name: Disable Wizard
       shell: |
         docker-compose exec wordpress wp core install --url=wpspa.tk --title="SPA Title" --admin_name=admin --admin_password=admin123 --admin_email=dk.khomich@spagomel.by
-        docker-compose exec wordpress wp plugin list
+        docker-compose exec wordpress wp theme install business-street
+        docker-compose exec wordpress wp theme activate business-street
       args:
         chdir: /applic
         executable: /bin/bash
-      register: value
-      tags:
-        - diswiz  
-    - debug:
-        msg: "{{ value.stdout }}"
