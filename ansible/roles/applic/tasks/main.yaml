@@ -15,12 +15,8 @@
     dest: "{{ main_dir }}"
   tags:
     - copydoc
-#- name: Install WP and Database
-#  shell:
-#    docker-compose -f "{{ main_dir}}/docker-compose.yaml" up -d
-#  tags:
-#    - applic_up
-- name: Run `docker-compose up` again
-  docker_compose:
-    project_src: "{{ main_dir }}"
-    build: no
+- name: Install WP and Database
+  shell:
+    docker-compose -f "{{ main_dir}}/docker-compose.yaml" up -d
+  tags:
+    - applic_up

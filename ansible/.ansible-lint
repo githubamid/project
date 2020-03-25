@@ -1,1 +1,4 @@
-parseable: true
+parseable: false
+skip_list:
+  - 'ANSIBLE0012'
+  - 'ANSIBLE0013'
