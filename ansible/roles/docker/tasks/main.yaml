@@ -1,6 +1,6 @@
 ---
 - name: Install common packages
-  apt: 
+  apt:
     name: "{{ packages }}"
     state: present
     update_cache: yes
@@ -23,8 +23,8 @@
     - addrepo
 - name: Install Docker apt package
   apt:
-    pkg: docker-ce
-    state: latest
+    name: docker-ce
+    state: present
     update_cache: yes
   notify:
     - restart_docker
