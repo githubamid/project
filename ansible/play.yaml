@@ -1,6 +1,6 @@
 ---
 - name: Install Docker_App
-  hosts: tag_Name_Work_Host
+  hosts: tag_Name_Blue_Host
   become: yes
   roles:
     - docker
