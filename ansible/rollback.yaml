@@ -5,8 +5,8 @@
     - name: Update Blue
       shell: |
         docker-compose exec wordpress wp core install --url=wp-blue.tk --title="Deployment" --admin_name=admin --admin_password=admin123 --admin_email=dk.khomich@spagomel.by
-        docker-compose exec wordpress wp theme install apex-business
-        docker-compose exec wordpress wp theme activate apex-business
+        docker-compose exec wordpress wp theme install business-street
+        docker-compose exec wordpress wp theme activate business-street
       args:
         chdir: /applic
         executable: /bin/bash
@@ -17,8 +17,8 @@
     - name: Update Green
       shell: |
         docker-compose exec wordpress wp core install --url=wp-green.tk --title="Deployment" --admin_name=admin --admin_password=admin123 --admin_email=dk.khomich@spagomel.by
-        docker-compose exec wordpress wp theme install business-street
-        docker-compose exec wordpress wp theme activate business-street
+        docker-compose exec wordpress wp theme install apex-business
+        docker-compose exec wordpress wp theme activate apex-business
       args:
         chdir: /applic
         executable: /bin/bash
