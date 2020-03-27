@@ -6,7 +6,7 @@
   tasks:
     - name: Disable Wizard
       shell: |
-        docker-compose exec wordpress wp core install --url=wpspa.tk --title="VERSION NUMBER 1" --admin_name=admin --admin_password=admin123 --admin_email=dk.khomich@spagomel.by
+        docker-compose exec wordpress wp core install --url=wp-blue.tk --title="VERSION NUMBER 1" --admin_name=admin --admin_password=admin123 --admin_email=dk.khomich@spagomel.by
         docker-compose exec wordpress wp theme install business-street
         docker-compose exec wordpress wp theme activate business-street
       args:

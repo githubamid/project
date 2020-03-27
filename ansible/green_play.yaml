@@ -6,7 +6,7 @@
   tasks:
     - name: Disable Wizard
       shell: |
-        docker-compose exec wordpress wp core install --url=wpspa.tk --title="VERSION NUMBER 2" --admin_name=admin --admin_password=admin123 --admin_email=dk.khomich@spagomel.by
+        docker-compose exec wordpress wp core install --url=wp-green.tk --title="VERSION NUMBER 2" --admin_name=admin --admin_password=admin123 --admin_email=dk.khomich@spagomel.by
         docker-compose exec wordpress wp theme install apex-business
         docker-compose exec wordpress wp theme activate apex-business
       args:
